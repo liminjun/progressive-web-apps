@@ -1,0 +1,21 @@
+{
+  "name": "progressive-web-apps",
+  "version": "1.0.0",
+  "description": "https://cn.udacity.com/course/intro-to-progressive-web-apps--ud811",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmssfe/progressive-web-apps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmssfe/progressive-web-apps/issues"
+  },
+  "homepage": "https://github.com/cmssfe/progressive-web-apps#readme"
+}
