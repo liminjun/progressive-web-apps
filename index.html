@@ -19,9 +19,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <!-- <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather PWA</title>
+  <title>天气程序-PWA版</title>
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
 
   <!-- TODO add manifest here -->
@@ -37,9 +37,9 @@
 <body>
 
   <header class="header">
-    <h1 class="header__title">Weather PWA</h1>
-    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
-    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+    <h1 class="header__title">天气程序</h1>
+    <button id="butRefresh" class="headerButton" aria-label="Refresh">刷新</button>
+    <button id="butAdd" class="headerButton" aria-label="Add">添加</button>
   </header>
 
   <main class="main">
@@ -60,81 +60,51 @@
           <div class="humidity"></div>
           <div class="wind">
             <span class="value"></span>
-            <span class="scale">mph</span>
-            <span class="direction"></span>°
+            <span class="scale">级</span>
+            <span class="direction"></span>方向
           </div>
-          <div class="sunrise"></div>
-          <div class="sunset"></div>
+          <div class="temperature"></div>
         </div>
       </div>
       <div class="future">
         <div class="oneday">
           <div class="date"></div>
           <div class="icon"></div>
-          <div class="temp-high">
+          
+          <div class="temp-low">
             <span class="value"></span>°
           </div>
-          <div class="temp-low">
+          <div class="temp-high">
             <span class="value"></span>°
           </div>
         </div>
         <div class="oneday">
           <div class="date"></div>
           <div class="icon"></div>
-          <div class="temp-high">
+          <div class="temp-low">
             <span class="value"></span>°
           </div>
-          <div class="temp-low">
+          <div class="temp-high">
             <span class="value"></span>°
           </div>
         </div>
         <div class="oneday">
           <div class="date"></div>
           <div class="icon"></div>
-          <div class="temp-high">
+          <div class="temp-low">
             <span class="value"></span>°
           </div>
-          <div class="temp-low">
+          <div class="temp-high">
             <span class="value"></span>°
           </div>
         </div>
         <div class="oneday">
           <div class="date"></div>
           <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
           <div class="temp-low">
             <span class="value"></span>°
           </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
           <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
             <span class="value"></span>°
           </div>
         </div>
@@ -144,23 +114,24 @@
 
   <div class="dialog-container">
     <div class="dialog">
-      <div class="dialog-title">Add new city</div>
+      <div class="dialog-title">添加城市</div>
       <div class="dialog-body">
         <select id="selectCityToAdd">
           <!-- Values map to Yahoo Weather API Where On Earth Identifiers (WOEIDs).
                https://developer.yahoo.com/weather/documentation.html#req -->
-          <option value="2357536">Austin, TX</option>
-          <option value="2367105">Boston, MA</option>
-          <option value="2379574">Chicago, IL</option>
-          <option value="2459115">New York, NY</option>
-          <option value="2475687">Portland, OR</option>
-          <option value="2487956">San Francisco, CA</option>
-          <option value="2490383">Seattle, WA</option>
+          <option value="320100">南京市</option>
+          <option value="320500">苏州市</option>
+          <option value="320200">无锡市</option>
+          <option value="310000">上海市</option>
+          <option value="330100">杭州市</option>
+          <option value="330200">宁波市</option>
+          <option value="330300">温州市</option>
+          
         </select>
       </div>
       <div class="dialog-buttons">
-        <button id="butAddCity" class="button">Add</button>
-        <button id="butAddCancel" class="button">Cancel</button>
+        <button id="butAddCity" class="button">确认</button>
+        <button id="butAddCancel" class="button">取消</button>
       </div>
     </div>
   </div>
